@@ -1,0 +1,15 @@
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\bin\Debug\MyApplications.exe.config
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\bin\Debug\MyApplications.exe
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\bin\Debug\MyApplications.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.Form1.resources
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.Properties.Resources.resources
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.GenerateResource.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CoreCompileInputs.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.exe
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyApplications.exe.config
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyApplications.exe
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyApplications.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.Setting.resources
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CopyComplete
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csprojAssemblyReference.cache

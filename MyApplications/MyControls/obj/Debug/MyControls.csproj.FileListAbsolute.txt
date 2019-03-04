@@ -1,0 +1,12 @@
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\bin\Debug\MyControls.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\bin\Debug\MyControls.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserBaseControl.resources
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserMessbox.resources
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.csproj.GenerateResource.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyControls.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyControls.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.Properties.Resources.resources
