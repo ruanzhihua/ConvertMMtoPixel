@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace MyControls.ContainerControls
 {
@@ -16,6 +17,14 @@ namespace MyControls.ContainerControls
         {
             InitializeComponent();
         }
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        public static extern IntPtr SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lPatam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        public static extern bool ReleaseCapture();
+
+        const int WM_NCLBUTTONDOWN = 0x00A1;
+        const int HTCAPTION = 2;
 
         
         
@@ -59,6 +68,15 @@ namespace MyControls.ContainerControls
                 this.Width = Screen.PrimaryScreen.Bounds.Width;
                 this.Height = Screen.PrimaryScreen.Bounds.Height;
                 this.BorderStyle = BorderStyle.None;
+            }
+        }
+
+        private void dragPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button==MouseButtons.Left)
+            {
+                ReleaseCapture();//释放捕获
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, (IntPtr)HTCAPTION, IntPtr.Zero);//拖动窗体
             }
         }
     }

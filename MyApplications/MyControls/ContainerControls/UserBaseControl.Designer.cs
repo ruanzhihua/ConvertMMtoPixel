@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Minimize = new System.Windows.Forms.Button();
             this.Maximize = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
-            this.Minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dragPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.dragPanel);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -50,11 +52,33 @@
             this.panel1.Size = new System.Drawing.Size(814, 30);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Minimize);
+            this.panel3.Controls.Add(this.Maximize);
+            this.panel3.Controls.Add(this.Exit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(711, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(103, 30);
+            this.panel3.TabIndex = 3;
+            // 
+            // Minimize
+            // 
+            this.Minimize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Minimize.Location = new System.Drawing.Point(13, 2);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(24, 24);
+            this.Minimize.TabIndex = 0;
+            this.Minimize.Text = "—";
+            this.Minimize.UseVisualStyleBackColor = true;
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+            // 
             // Maximize
             // 
             this.Maximize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Maximize.Image = global::MyControls.Properties.Resources.Maximize;
-            this.Maximize.Location = new System.Drawing.Point(139, 2);
+            this.Maximize.Location = new System.Drawing.Point(43, 2);
             this.Maximize.Name = "Maximize";
             this.Maximize.Size = new System.Drawing.Size(24, 24);
             this.Maximize.TabIndex = 2;
@@ -65,24 +89,13 @@
             // 
             this.Exit.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Exit.Location = new System.Drawing.Point(169, 2);
+            this.Exit.Location = new System.Drawing.Point(73, 2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(24, 24);
             this.Exit.TabIndex = 1;
             this.Exit.Text = "×";
             this.Exit.UseVisualStyleBackColor = true;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Minimize
-            // 
-            this.Minimize.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Minimize.Location = new System.Drawing.Point(109, 2);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(24, 24);
-            this.Minimize.TabIndex = 0;
-            this.Minimize.Text = "—";
-            this.Minimize.UseVisualStyleBackColor = true;
-            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
             // panel2
             // 
@@ -92,21 +105,18 @@
             this.panel2.Size = new System.Drawing.Size(814, 457);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Minimize);
-            this.panel3.Controls.Add(this.Maximize);
-            this.panel3.Controls.Add(this.Exit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(614, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 30);
-            this.panel3.TabIndex = 3;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // dragPanel
+            // 
+            this.dragPanel.Location = new System.Drawing.Point(0, 0);
+            this.dragPanel.Name = "dragPanel";
+            this.dragPanel.Size = new System.Drawing.Size(705, 30);
+            this.dragPanel.TabIndex = 0;
+            this.dragPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dragPanel_MouseDown);
             // 
             // UserBaseControl
             // 
@@ -132,5 +142,6 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel dragPanel;
     }
 }
