@@ -30,14 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dragPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Minimize = new System.Windows.Forms.Button();
             this.Maximize = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dragPanel = new System.Windows.Forms.Panel();
+            this.TittleLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.dragPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +51,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 30);
+            this.panel1.Size = new System.Drawing.Size(798, 30);
             this.panel1.TabIndex = 0;
+            // 
+            // dragPanel
+            // 
+            this.dragPanel.Controls.Add(this.TittleLabel);
+            this.dragPanel.Location = new System.Drawing.Point(0, 0);
+            this.dragPanel.Name = "dragPanel";
+            this.dragPanel.Size = new System.Drawing.Size(705, 30);
+            this.dragPanel.TabIndex = 0;
+            this.dragPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dragPanel_MouseDown);
             // 
             // panel3
             // 
@@ -58,7 +69,7 @@
             this.panel3.Controls.Add(this.Maximize);
             this.panel3.Controls.Add(this.Exit);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(711, 0);
+            this.panel3.Location = new System.Drawing.Point(695, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(103, 30);
             this.panel3.TabIndex = 3;
@@ -102,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 30);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 457);
+            this.panel2.Size = new System.Drawing.Size(798, 418);
             this.panel2.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -110,24 +121,30 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dragPanel
+            // TittleLabel
             // 
-            this.dragPanel.Location = new System.Drawing.Point(0, 0);
-            this.dragPanel.Name = "dragPanel";
-            this.dragPanel.Size = new System.Drawing.Size(705, 30);
-            this.dragPanel.TabIndex = 0;
-            this.dragPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dragPanel_MouseDown);
+            this.TittleLabel.AutoSize = true;
+            this.TittleLabel.Location = new System.Drawing.Point(8, 8);
+            this.TittleLabel.Name = "TittleLabel";
+            this.TittleLabel.Size = new System.Drawing.Size(29, 12);
+            this.TittleLabel.TabIndex = 0;
+            this.TittleLabel.Text = "标题";
             // 
             // UserBaseControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(798, 448);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserBaseControl";
-            this.Size = new System.Drawing.Size(814, 487);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.UserBaseControl_Load);
             this.panel1.ResumeLayout(false);
+            this.dragPanel.ResumeLayout(false);
+            this.dragPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -143,5 +160,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel dragPanel;
+        private System.Windows.Forms.Label TittleLabel;
     }
 }

@@ -110,7 +110,7 @@ namespace MyApplications
         {
             Setting setting = new Setting();
             
-            setting.ShowAsForm();
+            setting.ShowDialog();
             
             
             

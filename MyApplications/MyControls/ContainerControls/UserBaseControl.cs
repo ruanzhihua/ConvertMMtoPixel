@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace MyControls.ContainerControls
 {
-    public partial class UserBaseControl : UserControl
+    public partial class UserBaseControl : Form
     {
         public UserBaseControl()
         {
@@ -26,18 +26,117 @@ namespace MyControls.ContainerControls
         const int WM_NCLBUTTONDOWN = 0x00A1;
         const int HTCAPTION = 2;
 
-        
-        
+        public new FormBorderStyle FormBorderStyle
+        {
+            get
+            {
+                return base.FormBorderStyle;
+            }
+            set
+            {
+                if(value !=FormBorderStyle.Sizable&&value!=FormBorderStyle.SizableToolWindow)
+                {
+
+                }
+                base.FormBorderStyle = value;
+            }
+        }
+        #region 隐藏父类属性
+        [Browsable(false)]
+        public new string Text
+        {
+            get
+            {
+                return TittleLabel.Text;
+            }
+            set { }
+        }
+        [Browsable(false)]
+        public new bool ControlBox
+        {
+            get
+            {
+                return false;
+            }
+            set
+            {
+                base.ControlBox = false;
+            }
+        }
+        #endregion
+        #region 添加属性
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Description("窗体标题")]
+        public string Tittle
+        {
+            get
+            {
+                return this.TittleLabel.Text;
+            }
+            set
+            {
+                TittleLabel.Text = value;
+            }
+        }
+        [Browsable(true), EditorBrowsable(EditorBrowsableState.Always), Description("窗体标题字体样式")]
+        public Font TittleFont
+        {
+            get
+            {
+                return TittleLabel.Font;
+            }
+            set
+            {
+                TittleLabel.Font = value;
+            }
+        }
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Description("窗体标题字体颜色")]
+        public Color TitleColor
+        {
+            get
+            {
+                return TittleLabel.ForeColor;
+            }
+            set
+            {
+                TittleLabel.ForeColor = value;
+            }
+        }
+
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Description("窗体标题栏背景色")]
+        public Color TitleBarBackColor
+        {
+            get
+            {
+                return panel1.BackColor;
+            }
+            set
+            {
+                panel1.BackColor = value;
+            }
+        }
+
+
+        #endregion
+
         private void Exit_Click(object sender, EventArgs e)
         {
             //this.Dispose();
-            this.Parent.Dispose();
+            this.Dispose();
         }
 
         private void Minimize_Click(object sender, EventArgs e)
         {
-            ((Form)this.Parent).WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
+        /// <summary>
+        /// 不再使用
+        /// </summary>
         public void ShowAsForm()
         {
             Form form = new Form();
@@ -50,24 +149,25 @@ namespace MyControls.ContainerControls
             form.Width = this.Width;
             form.Height = this.Height;
             form.Controls.Add(this);
+            this.Dock = DockStyle.Fill;
             form.ShowDialog();
         }
-
+        
         private void Maximize_Click(object sender, EventArgs e)
         {
-            if (((Form)this.Parent).WindowState == FormWindowState.Maximized)
+            if (this.WindowState == FormWindowState.Maximized)
             {
-                ((Form)this.Parent).WindowState = FormWindowState.Normal;
+                this.WindowState = FormWindowState.Normal;
                 this.Width = 814;
                 this.Height = 487;
-                this.BorderStyle = BorderStyle.FixedSingle;
+                this.FormBorderStyle = FormBorderStyle.FixedSingle;
             }
             else
             {
-                ((Form)this.Parent).WindowState = FormWindowState.Maximized;
+                this.WindowState = FormWindowState.Maximized;
                 this.Width = Screen.PrimaryScreen.Bounds.Width;
                 this.Height = Screen.PrimaryScreen.Bounds.Height;
-                this.BorderStyle = BorderStyle.None;
+                this.FormBorderStyle = FormBorderStyle.None;
             }
         }
 
@@ -78,6 +178,11 @@ namespace MyControls.ContainerControls
                 ReleaseCapture();//释放捕获
                 SendMessage(this.Handle, WM_NCLBUTTONDOWN, (IntPtr)HTCAPTION, IntPtr.Zero);//拖动窗体
             }
+        }
+
+        private void UserBaseControl_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

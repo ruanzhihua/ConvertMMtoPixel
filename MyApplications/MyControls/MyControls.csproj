@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContainerControls\UserBaseControl.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ContainerControls\UserBaseControl.Designer.cs">
       <DependentUpon>UserBaseControl.cs</DependentUpon>
