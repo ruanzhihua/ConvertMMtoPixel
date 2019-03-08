@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.theFirstNum = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.theSecondNum = new System.Windows.Forms.TextBox();
@@ -64,6 +64,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Sort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -169,13 +170,13 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 设置参数ToolStripMenuItem
             // 
             this.设置参数ToolStripMenuItem.Name = "设置参数ToolStripMenuItem";
-            this.设置参数ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.设置参数ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.设置参数ToolStripMenuItem.Text = "设置参数";
             this.设置参数ToolStripMenuItem.Click += new System.EventHandler(this.设置参数ToolStripMenuItem_Click);
             // 
@@ -200,7 +201,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(88, 378);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(24, 378);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStripContainer1.Location = new System.Drawing.Point(650, 25);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -220,7 +221,7 @@
             this.菜单二ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(62, 378);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 378);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -231,25 +232,26 @@
             this.twoToolStripMenuItem,
             this.threeToolStripMenuItem});
             this.菜单一ToolStripMenuItem.Name = "菜单一ToolStripMenuItem";
-            this.菜单一ToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
-            this.菜单一ToolStripMenuItem.Text = "菜单一";
+            this.菜单一ToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
+            this.菜单一ToolStripMenuItem.Text = "外部程序";
             // 
             // oneToolStripMenuItem
             // 
             this.oneToolStripMenuItem.Name = "oneToolStripMenuItem";
-            this.oneToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.oneToolStripMenuItem.Text = "one";
+            this.oneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oneToolStripMenuItem.Text = "音乐下载";
+            this.oneToolStripMenuItem.Click += new System.EventHandler(this.oneToolStripMenuItem_Click);
             // 
             // twoToolStripMenuItem
             // 
             this.twoToolStripMenuItem.Name = "twoToolStripMenuItem";
-            this.twoToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.twoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.twoToolStripMenuItem.Text = "two";
             // 
             // threeToolStripMenuItem
             // 
             this.threeToolStripMenuItem.Name = "threeToolStripMenuItem";
-            this.threeToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.threeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.threeToolStripMenuItem.Text = "three";
             // 
             // 菜单二ToolStripMenuItem
@@ -260,7 +262,7 @@
             this.toolStripMenuItem4,
             this.toolStripMenuItem5});
             this.菜单二ToolStripMenuItem.Name = "菜单二ToolStripMenuItem";
-            this.菜单二ToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
+            this.菜单二ToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
             this.菜单二ToolStripMenuItem.Text = "菜单二";
             // 
             // toolStripMenuItem2
@@ -308,14 +310,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sort,
@@ -323,17 +325,17 @@
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(6, 20);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -343,9 +345,9 @@
             // Sort
             // 
             this.Sort.DataPropertyName = "Sort";
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.Sort.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.Sort.DefaultCellStyle = dataGridViewCellStyle2;
             this.Sort.HeaderText = "Sort";
             this.Sort.Name = "Sort";
             this.Sort.Width = 50;
@@ -353,8 +355,8 @@
             // Result
             // 
             this.Result.DataPropertyName = "Result";
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            this.Result.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            this.Result.DefaultCellStyle = dataGridViewCellStyle3;
             this.Result.HeaderText = "Result";
             this.Result.Name = "Result";
             this.Result.Width = 150;
@@ -424,6 +426,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sort;
         private System.Windows.Forms.DataGridViewTextBoxColumn Result;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

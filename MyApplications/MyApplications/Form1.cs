@@ -19,6 +19,8 @@ namespace MyApplications
 
         DataTable dtResult=new DataTable();
         DataView dvResult=new DataView();
+
+        string[] applicationPath = { Application.StartupPath + "\\无损音乐下载器V3.5.exe" };
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -113,6 +115,20 @@ namespace MyApplications
             setting.ShowDialog();
             
             
+            
+        }
+
+        private void oneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //如果已启动程序，不做动作
+            System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName(applicationPath[0].Replace(Application.StartupPath+"\\","").Replace(".exe","").Trim());
+            if(process.Length>0)
+            {
+                return;
+            }
+            System.Diagnostics.Process processNew = new System.Diagnostics.Process();
+            processNew.StartInfo.FileName = applicationPath[0];
+            processNew.Start();
             
         }
     }
