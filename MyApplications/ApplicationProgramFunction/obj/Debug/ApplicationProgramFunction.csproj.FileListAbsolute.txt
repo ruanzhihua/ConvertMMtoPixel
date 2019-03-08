@@ -1,0 +1,8 @@
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\bin\Debug\ApplicationProgramFunction.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\bin\Debug\ApplicationProgramFunction.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csprojAssemblyReference.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csproj.CoreCompileInputs.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.pdb
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\ApplicationProgramFunction.dll
+D:\HIS\SVNCode\MyApplications\MyApplications\Debug\ApplicationProgramFunction.pdb

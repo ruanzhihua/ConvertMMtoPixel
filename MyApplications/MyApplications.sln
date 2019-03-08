@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplications", "MyApplica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyControls", "MyControls\MyControls.csproj", "{5D38836A-59C3-443B-B898-82B4EF56FDDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationProgramFunction", "ApplicationProgramFunction\ApplicationProgramFunction.csproj", "{90F1C159-008E-4B7E-9ECA-9FBBF1C63972}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5D38836A-59C3-443B-B898-82B4EF56FDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D38836A-59C3-443B-B898-82B4EF56FDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D38836A-59C3-443B-B898-82B4EF56FDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F1C159-008E-4B7E-9ECA-9FBBF1C63972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F1C159-008E-4B7E-9ECA-9FBBF1C63972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F1C159-008E-4B7E-9ECA-9FBBF1C63972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F1C159-008E-4B7E-9ECA-9FBBF1C63972}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

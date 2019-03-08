@@ -106,6 +106,11 @@ namespace MyApplications
                 column.SortMode = DataGridViewColumnSortMode.Automatic;
             }
 
+            #region 菜单图标
+            Icon iconForMusicDownload = ApplicationProgramFunction.GetSystemIcon.GetIconByFileName(applicationPath[0],false);
+            oneToolStripMenuItem.Image = iconForMusicDownload.ToBitmap();
+            #endregion
+
         }
 
         private void 设置参数ToolStripMenuItem_Click(object sender, EventArgs e)
