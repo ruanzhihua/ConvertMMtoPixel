@@ -100,6 +100,8 @@ namespace MyApplications
         {
             this.timer1.Start();
             this.initResultDisplay();
+            this.DoubleBuffered = true;
+            this.PictureBoxPaint();
             //排序按钮
             foreach(DataGridViewColumn column in dataGridView1.Columns)
             {
@@ -134,6 +136,25 @@ namespace MyApplications
             System.Diagnostics.Process processNew = new System.Diagnostics.Process();
             processNew.StartInfo.FileName = applicationPath[0];
             processNew.Start();
+            
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBoxPaint()
+        {
+            Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            using (Graphics graphics = Graphics.FromImage(bitmap))
+            {
+                PointF pf = new PointF(10, 10);
+                Font f = new Font("宋体", 10, FontStyle.Regular);
+                SolidBrush sbrush = new SolidBrush(Color.Black);
+                graphics.DrawString("测试图片内容", f, sbrush, pf);
+                pictureBox1.Image = bitmap;
+            }
             
         }
     }

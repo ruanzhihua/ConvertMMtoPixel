@@ -13,3 +13,4 @@ D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyApplications.pdb
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.Setting.resources
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CopyComplete
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csprojAssemblyReference.cache
+D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csprojFakesResolveAssemblyReference.cache
