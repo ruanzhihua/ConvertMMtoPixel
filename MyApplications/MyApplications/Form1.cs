@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,7 @@ namespace MyApplications
 
         DataTable dtResult=new DataTable();
         DataView dvResult=new DataView();
-
+        int variationalWidth = 0;
         string[] applicationPath = { Application.StartupPath + "\\无损音乐下载器V3.5.exe" };
         private void label1_Click(object sender, EventArgs e)
         {
@@ -113,6 +114,10 @@ namespace MyApplications
             oneToolStripMenuItem.Image = iconForMusicDownload.ToBitmap();
             #endregion
 
+            //开启线程
+            Thread t1 = new Thread(new ThreadStart(variationalBarThread));
+            t1.Start();
+
         }
 
         private void 设置参数ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,7 +143,23 @@ namespace MyApplications
             processNew.Start();
             
         }
-
+        private void variationalBarThread()
+        {
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 10;
+            timer.Enabled = true;
+            timer.AutoReset = true;
+            timer.Elapsed += new System.Timers.ElapsedEventHandler(timerElapsed);
+        }
+        private void timerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {            
+            variationalWidth += 1;
+            if(variationalWidth == 151)
+            {
+                variationalWidth = 0;
+            }
+            variationalBar.Width = variationalWidth;
+        }
         private void PictureBox1_Click(object sender, EventArgs e)
         {
 

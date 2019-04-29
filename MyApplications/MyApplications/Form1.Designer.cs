@@ -68,6 +68,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.variationalBar = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -79,6 +81,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // theFirstNum
@@ -393,11 +396,30 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // variationalBar
+            // 
+            this.variationalBar.BackColor = System.Drawing.Color.Red;
+            this.variationalBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.variationalBar.Location = new System.Drawing.Point(0, 0);
+            this.variationalBar.Name = "variationalBar";
+            this.variationalBar.Size = new System.Drawing.Size(150, 15);
+            this.variationalBar.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.variationalBar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 419);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(834, 20);
+            this.panel3.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.toolStripContainer1);
@@ -425,6 +447,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +489,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label variationalBar;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
