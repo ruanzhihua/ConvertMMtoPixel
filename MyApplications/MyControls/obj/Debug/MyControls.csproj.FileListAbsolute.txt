@@ -10,3 +10,13 @@ D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.pdb
 D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyControls.dll
 D:\HIS\SVNCode\MyApplications\MyApplications\Debug\MyControls.pdb
 D:\HIS\SVNCode\MyApplications\MyApplications\MyControls\obj\Debug\MyControls.Properties.Resources.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyControls.dll
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyControls.pdb
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserBaseControl.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserMessbox.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.Properties.Resources.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csproj.GenerateResource.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.dll
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.pdb

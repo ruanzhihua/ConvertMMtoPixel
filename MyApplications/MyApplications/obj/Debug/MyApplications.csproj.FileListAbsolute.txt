@@ -14,3 +14,16 @@ D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplicat
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CopyComplete
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csprojAssemblyReference.cache
 D:\HIS\SVNCode\MyApplications\MyApplications\MyApplications\obj\Debug\MyApplications.csprojFakesResolveAssemblyReference.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csprojAssemblyReference.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.ColorToArgb.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.Form1.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.Properties.Resources.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.Setting.resources
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.GenerateResource.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CoreCompileInputs.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.exe
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.pdb
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.exe.config
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.exe
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.pdb
+E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CopyComplete

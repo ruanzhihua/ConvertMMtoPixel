@@ -6,3 +6,15 @@ D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debu
 D:\HIS\SVNCode\MyApplications\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.pdb
 D:\HIS\SVNCode\MyApplications\MyApplications\Debug\ApplicationProgramFunction.dll
 D:\HIS\SVNCode\MyApplications\MyApplications\Debug\ApplicationProgramFunction.pdb
+D:\MyCode\ConvertMMtoPixel\MyApplications\Debug\ApplicationProgramFunction.dll
+D:\MyCode\ConvertMMtoPixel\MyApplications\Debug\ApplicationProgramFunction.pdb
+D:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csprojAssemblyReference.cache
+D:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csproj.CoreCompileInputs.cache
+D:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.dll
+D:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.pdb
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\ApplicationProgramFunction.dll
+E:\MyCode\ConvertMMtoPixel\MyApplications\Debug\ApplicationProgramFunction.pdb
+E:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csprojAssemblyReference.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csproj.CoreCompileInputs.cache
+E:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.dll
+E:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.pdb

@@ -66,6 +66,7 @@ namespace MyApplications
                             dataRow["Sort"] = int.Parse(dataRow["Sort"].ToString()) - 1;
                         }
                         row["Sort"] = 13;
+                        
                     }
                     dtResult.Rows.Add(row);                   
                     
@@ -143,6 +144,12 @@ namespace MyApplications
             processNew.Start();
             
         }
+        private void twoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorToArgb colorToArgb = new ColorToArgb();
+            colorToArgb.ShowDialog();
+            //ColorToArgb
+        }
         private void variationalBarThread()
         {
             System.Timers.Timer timer = new System.Timers.Timer();
@@ -178,5 +185,7 @@ namespace MyApplications
             }
             
         }
+
+        
     }
 }
