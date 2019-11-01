@@ -44,6 +44,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Test\MyControls.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeSystemWallPapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSystemWallPapper.Designer.cs">
+      <DependentUpon>ChangeSystemWallPapper.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,9 @@
     <Compile Include="ColorToArgb.Designer.cs">
       <DependentUpon>ColorToArgb.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangeSystemWallPapper.resx">
+      <DependentUpon>ChangeSystemWallPapper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ColorToArgb.resx">
       <DependentUpon>ColorToArgb.cs</DependentUpon>
     </EmbeddedResource>

@@ -150,6 +150,11 @@ namespace MyApplications
             colorToArgb.ShowDialog();
             //ColorToArgb
         }
+        private void threeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeSystemWallPapper changeSystemWallPapper = new ChangeSystemWallPapper();
+            changeSystemWallPapper.Show();
+        }
         private void variationalBarThread()
         {
             System.Timers.Timer timer = new System.Timers.Timer();
