@@ -32,12 +32,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnConfirmSelectPath = new System.Windows.Forms.Button();
+            this.btnSelectWallPapperPath = new System.Windows.Forms.Button();
+            this.papperFilePath = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnConfirmSelectPath);
+            this.panel2.Controls.Add(this.btnSelectWallPapperPath);
+            this.panel2.Controls.Add(this.papperFilePath);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
@@ -82,6 +88,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnConfirmSelectPath
+            // 
+            this.btnConfirmSelectPath.Location = new System.Drawing.Point(711, 94);
+            this.btnConfirmSelectPath.Name = "btnConfirmSelectPath";
+            this.btnConfirmSelectPath.Size = new System.Drawing.Size(47, 23);
+            this.btnConfirmSelectPath.TabIndex = 6;
+            this.btnConfirmSelectPath.Text = "DO";
+            this.btnConfirmSelectPath.UseVisualStyleBackColor = true;
+            this.btnConfirmSelectPath.Click += new System.EventHandler(this.btnConfirmSelectPath_Click);
+            // 
+            // btnSelectWallPapperPath
+            // 
+            this.btnSelectWallPapperPath.Location = new System.Drawing.Point(613, 94);
+            this.btnSelectWallPapperPath.Name = "btnSelectWallPapperPath";
+            this.btnSelectWallPapperPath.Size = new System.Drawing.Size(92, 23);
+            this.btnSelectWallPapperPath.TabIndex = 5;
+            this.btnSelectWallPapperPath.Text = "选择壁纸路径";
+            this.btnSelectWallPapperPath.UseVisualStyleBackColor = true;
+            this.btnSelectWallPapperPath.Click += new System.EventHandler(this.btnSelectWallPapperPath_Click);
+            // 
+            // papperFilePath
+            // 
+            this.papperFilePath.Location = new System.Drawing.Point(480, 96);
+            this.papperFilePath.Name = "papperFilePath";
+            this.papperFilePath.Size = new System.Drawing.Size(127, 21);
+            this.papperFilePath.TabIndex = 4;
+            // 
             // ChangeSystemWallPapper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -103,5 +136,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConfirmSelectPath;
+        private System.Windows.Forms.Button btnSelectWallPapperPath;
+        private System.Windows.Forms.TextBox papperFilePath;
     }
 }

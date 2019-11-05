@@ -22,6 +22,8 @@ namespace MyApplications
         DataView dvResult=new DataView();
         int variationalWidth = 0;
         string[] applicationPath = { Application.StartupPath + "\\无损音乐下载器V3.5.exe" };
+        System.Timers.Timer timer = new System.Timers.Timer();
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -156,8 +158,7 @@ namespace MyApplications
             changeSystemWallPapper.Show();
         }
         private void variationalBarThread()
-        {
-            System.Timers.Timer timer = new System.Timers.Timer();
+        {            
             timer.Interval = 10;
             timer.Enabled = true;
             timer.AutoReset = true;
@@ -191,6 +192,16 @@ namespace MyApplications
             
         }
 
-        
+        private void variationalBar_DoubleClick(object sender, EventArgs e)
+        {
+            if (timer.Enabled)
+            {
+                this.timer.Stop();
+            }
+            else
+            {
+                this.timer.Start();
+            }
+        }
     }
 }
