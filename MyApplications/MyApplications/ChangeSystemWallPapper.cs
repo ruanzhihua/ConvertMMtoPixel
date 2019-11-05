@@ -27,6 +27,7 @@ namespace MyApplications
         System.Timers.Timer timerForWallpapperRoll = new System.Timers.Timer();
         FileInfo[] files;
         int rollWallPapperIndex=0;
+        DelegateForCalculateFunctionRunTime delegateForCalculateFunctionRunTime = new DelegateForCalculateFunctionRunTime();
         #endregion
 
         #region 系统组件
@@ -156,14 +157,19 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
                 DirectoryInfo directoryInfo = new DirectoryInfo(papperFilePath.Text);
                 files = directoryInfo.GetFiles();
             }
+            delegateForCalculateFunctionRunTime.RunTimeEvent += ChangeDesktopImage;
         }
 
         private void TimerForWallpapperRoll_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (files.Count() > 0)
             {
-
-                this.ChangeDesktopImage(files[rollWallPapperIndex].FullName, false);
+                if (rollWallPapperIndex == files.Count())
+                {
+                    rollWallPapperIndex = 0;
+                }
+                //this.ChangeDesktopImage(files[rollWallPapperIndex].FullName, false);
+                delegateForCalculateFunctionRunTime.FunctionRunTime(files[rollWallPapperIndex].FullName, false);
                 rollWallPapperIndex++;
                 if(rollWallPapperIndex==files.Count())
                 {
