@@ -14,6 +14,9 @@ using Microsoft.Win32;
 
 namespace MyApplications
 {
+    /// <summary>
+    /// 自己写的代码我自己度看不懂，委托。。。。
+    /// </summary>
     public partial class ChangeSystemWallPapper : MyControls.ContainerControls.UserBaseControl
     {
         public ChangeSystemWallPapper()
