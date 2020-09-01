@@ -152,7 +152,7 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
             }
             this.timerForWallpapperRoll.Elapsed += TimerForWallpapperRoll_Elapsed;
             this.timerForWallpapperRoll.Interval = 120000;//2分钟间隔
-            if (!string.IsNullOrWhiteSpace(papperFilePath.Text))
+            if (!string.IsNullOrWhiteSpace(papperFilePath.Text)&&File.Exists(papperFilePath.Text))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(papperFilePath.Text);
                 files = directoryInfo.GetFiles();

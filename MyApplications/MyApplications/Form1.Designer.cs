@@ -210,7 +210,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(76, 389);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(24, 389);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStripContainer1.Location = new System.Drawing.Point(834, 25);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -230,7 +230,7 @@
             this.菜单二ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(74, 389);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 389);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -241,7 +241,7 @@
             this.twoToolStripMenuItem,
             this.threeToolStripMenuItem});
             this.菜单一ToolStripMenuItem.Name = "菜单一ToolStripMenuItem";
-            this.菜单一ToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
+            this.菜单一ToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
             this.菜单一ToolStripMenuItem.Text = "外部程序";
             // 
             // oneToolStripMenuItem
@@ -273,7 +273,7 @@
             this.toolStripMenuItem4,
             this.toolStripMenuItem5});
             this.菜单二ToolStripMenuItem.Name = "菜单二ToolStripMenuItem";
-            this.菜单二ToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
+            this.菜单二ToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
             this.菜单二ToolStripMenuItem.Text = "菜单二";
             // 
             // toolStripMenuItem2
