@@ -17,7 +17,7 @@ using System.Drawing;
 
 namespace ApplicationProgramFunction
 {
-    class PDFWatermarkFunction
+    public  class PDFWatermarkFunction
     {
 
         protected void Button1_Click(object sender, EventArgs e)

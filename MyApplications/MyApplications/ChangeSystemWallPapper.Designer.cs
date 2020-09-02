@@ -43,6 +43,8 @@
             this.textBoxPDFFolder = new System.Windows.Forms.TextBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.buttonSelectCacheFolder = new System.Windows.Forms.Button();
+            this.textBoxWaterPDFFolder = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -128,7 +130,7 @@
             // 
             // buttonExecute
             // 
-            this.buttonExecute.Location = new System.Drawing.Point(19, 168);
+            this.buttonExecute.Location = new System.Drawing.Point(19, 174);
             this.buttonExecute.Name = "buttonExecute";
             this.buttonExecute.Size = new System.Drawing.Size(47, 23);
             this.buttonExecute.TabIndex = 12;
@@ -181,6 +183,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.buttonSelectCacheFolder);
+            this.groupControl1.Controls.Add(this.textBoxWaterPDFFolder);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.textBoxPDFFolder);
             this.groupControl1.Controls.Add(this.buttonExecute);
@@ -201,6 +205,23 @@
             this.labelControl1.Size = new System.Drawing.Size(21, 14);
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "PDF";
+            // 
+            // buttonSelectCacheFolder
+            // 
+            this.buttonSelectCacheFolder.Location = new System.Drawing.Point(152, 144);
+            this.buttonSelectCacheFolder.Name = "buttonSelectCacheFolder";
+            this.buttonSelectCacheFolder.Size = new System.Drawing.Size(99, 23);
+            this.buttonSelectCacheFolder.TabIndex = 15;
+            this.buttonSelectCacheFolder.Text = "选择存储位置";
+            this.buttonSelectCacheFolder.UseVisualStyleBackColor = true;
+            this.buttonSelectCacheFolder.Click += new System.EventHandler(this.buttonSelectCacheFolder_Click);
+            // 
+            // textBoxWaterPDFFolder
+            // 
+            this.textBoxWaterPDFFolder.Location = new System.Drawing.Point(19, 146);
+            this.textBoxWaterPDFFolder.Name = "textBoxWaterPDFFolder";
+            this.textBoxWaterPDFFolder.Size = new System.Drawing.Size(127, 22);
+            this.textBoxWaterPDFFolder.TabIndex = 14;
             // 
             // ChangeSystemWallPapper
             // 
@@ -237,5 +258,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBoxPDFFolder;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.Button buttonSelectCacheFolder;
+        private System.Windows.Forms.TextBox textBoxWaterPDFFolder;
     }
 }

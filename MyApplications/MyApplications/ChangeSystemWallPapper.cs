@@ -32,7 +32,7 @@ namespace MyApplications
         FileInfo[] filesPdf;
         int rollWallPapperIndex=0;
         DelegateForCalculateFunctionRunTime delegateForCalculateFunctionRunTime = new DelegateForCalculateFunctionRunTime();
-        
+        ApplicationProgramFunction.PDFWatermarkFunction pDFWatermarkFunction = new ApplicationProgramFunction.PDFWatermarkFunction();
         #endregion
 
         #region 系统组件
@@ -250,10 +250,23 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
                 MessageBox.Show("请选择PDF文件夹或水印路径！", "提示");
                 return;
             }
+            
             foreach(FileInfo fileInfo in filesPdf)
             {
-                
+                string outputfilepath = textBoxWaterPDFFolder.Text;
+                if (string.IsNullOrWhiteSpace(outputfilepath))
+                {
+                    outputfilepath = fileInfo.FullName.Split('.')[0] + "1.pdf";
+                }
+                    
+                    pDFWatermarkFunction.PDFWatermark(fileInfo.FullName, outputfilepath, this.textBoxWaterPapper.Text, 100, -20);
             }
+        }
+
+        private void buttonSelectCacheFolder_Click(object sender, EventArgs e)
+        {
+            string waterPdfFilePath = this.SelectPath();
+            this.textBoxWaterPDFFolder.Text = waterPdfFilePath;
         }
     }
 }
