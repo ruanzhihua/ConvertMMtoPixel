@@ -155,6 +155,8 @@ namespace MyApplications
         private void threeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeSystemWallPapper changeSystemWallPapper = new ChangeSystemWallPapper();
+            // 窗口最大化
+            changeSystemWallPapper.WindowState = FormWindowState.Maximized;
             changeSystemWallPapper.Show();
         }
         private void variationalBarThread()

@@ -29,8 +29,10 @@ namespace MyApplications
         string strSetingTexFilePathPath = System.Windows.Forms.Application.StartupPath + "\\SetingTexFileForChangeSystemWallPapperRoll.txt";
         System.Timers.Timer timerForWallpapperRoll = new System.Timers.Timer();
         FileInfo[] files;
+        FileInfo[] filesPdf;
         int rollWallPapperIndex=0;
         DelegateForCalculateFunctionRunTime delegateForCalculateFunctionRunTime = new DelegateForCalculateFunctionRunTime();
+        
         #endregion
 
         #region 系统组件
@@ -58,6 +60,7 @@ namespace MyApplications
         {
             string path = string.Empty;
             System.Windows.Forms.FolderBrowserDialog fbd = new System.Windows.Forms.FolderBrowserDialog();
+            //System.Windows.Forms.FileDialog fileDialog = new System.Windows.Forms.OpenFileDialog();
             if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 path = fbd.SelectedPath;
@@ -197,6 +200,59 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
                 streamWriter.WriteLine(papperFilePath.Text);
                 streamWriter.Close();
                 this.timerForWallpapperRoll.Start();
+            }
+        }
+        /// <summary>
+        /// 选择PDF文件路径
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string papperFilePath = this.SelectPath();
+            this.textBoxPDFFolder.Text = papperFilePath;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string papperFilePath = this.SelectPathForFile("图像(*.jpg;*.JPG)|*.jpg;*.JPG");
+            this.textBoxWaterPapper.Text = papperFilePath;
+        }
+        /// <summary>
+        /// 文件格式
+        /// </summary>
+        /// <param name="filterString"></param>
+        /// <returns></returns>
+        private string SelectPathForFile(string filterString)
+        {
+            string path = string.Empty;
+            var openFileDialog = new Microsoft.Win32.OpenFileDialog()
+            {
+                Filter = filterString//如果需要筛选txt文件（"Files (*.txt)|*.txt"）
+            };
+            var result = openFileDialog.ShowDialog();
+            if (result == true)
+            {
+                path = openFileDialog.FileName;
+            }
+            return path;
+        }
+
+        private void buttonExecute_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBoxPDFFolder.Text) && File.Exists(textBoxPDFFolder.Text)&& !string.IsNullOrWhiteSpace(textBoxWaterPapper.Text) && File.Exists(textBoxWaterPapper.Text))
+            {
+                DirectoryInfo directoryInfo = new DirectoryInfo(textBoxPDFFolder.Text);
+                filesPdf = directoryInfo.GetFiles();
+            }
+            else
+            {
+                MessageBox.Show("请选择PDF文件夹或水印路径！", "提示");
+                return;
+            }
+            foreach(FileInfo fileInfo in filesPdf)
+            {
+                
             }
         }
     }

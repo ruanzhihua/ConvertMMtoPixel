@@ -35,12 +35,23 @@
             this.btnConfirmSelectPath = new System.Windows.Forms.Button();
             this.btnSelectWallPapperPath = new System.Windows.Forms.Button();
             this.papperFilePath = new System.Windows.Forms.TextBox();
+            this.buttonExecute = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBoxWaterPapper = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBoxPDFFolder = new System.Windows.Forms.TextBox();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.groupControl1);
             this.panel2.Controls.Add(this.btnConfirmSelectPath);
             this.panel2.Controls.Add(this.btnSelectWallPapperPath);
             this.panel2.Controls.Add(this.papperFilePath);
@@ -48,7 +59,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.papperFile);
-            this.panel2.Size = new System.Drawing.Size(800, 420);
+            this.panel2.Size = new System.Drawing.Size(1129, 596);
             // 
             // papperFile
             // 
@@ -115,17 +126,96 @@
             this.papperFilePath.Size = new System.Drawing.Size(127, 21);
             this.papperFilePath.TabIndex = 4;
             // 
+            // buttonExecute
+            // 
+            this.buttonExecute.Location = new System.Drawing.Point(19, 168);
+            this.buttonExecute.Name = "buttonExecute";
+            this.buttonExecute.Size = new System.Drawing.Size(47, 23);
+            this.buttonExecute.TabIndex = 12;
+            this.buttonExecute.Text = "执行";
+            this.buttonExecute.UseVisualStyleBackColor = true;
+            this.buttonExecute.Click += new System.EventHandler(this.buttonExecute_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(152, 107);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "选择水印文件";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBoxWaterPapper
+            // 
+            this.textBoxWaterPapper.Location = new System.Drawing.Point(19, 109);
+            this.textBoxWaterPapper.Name = "textBoxWaterPapper";
+            this.textBoxWaterPapper.Size = new System.Drawing.Size(127, 22);
+            this.textBoxWaterPapper.TabIndex = 10;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(257, 69);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(47, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "DO";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(152, 69);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 23);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "选择PDF文件夹";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBoxPDFFolder
+            // 
+            this.textBoxPDFFolder.Location = new System.Drawing.Point(19, 71);
+            this.textBoxPDFFolder.Name = "textBoxPDFFolder";
+            this.textBoxPDFFolder.Size = new System.Drawing.Size(127, 22);
+            this.textBoxPDFFolder.TabIndex = 7;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.textBoxPDFFolder);
+            this.groupControl1.Controls.Add(this.buttonExecute);
+            this.groupControl1.Controls.Add(this.button6);
+            this.groupControl1.Controls.Add(this.button4);
+            this.groupControl1.Controls.Add(this.button5);
+            this.groupControl1.Controls.Add(this.textBoxWaterPapper);
+            this.groupControl1.Location = new System.Drawing.Point(461, 123);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(602, 421);
+            this.groupControl1.TabIndex = 13;
+            this.groupControl1.Text = "批量添加水印";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(19, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(21, 14);
+            this.labelControl1.TabIndex = 13;
+            this.labelControl1.Text = "PDF";
+            // 
             // ChangeSystemWallPapper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1129, 626);
             this.Name = "ChangeSystemWallPapper";
             this.Tittle = "ChangeSystemWallPapper";
             this.Load += new System.EventHandler(this.ChangeSystemWallPapper_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -139,5 +229,13 @@
         private System.Windows.Forms.Button btnConfirmSelectPath;
         private System.Windows.Forms.Button btnSelectWallPapperPath;
         private System.Windows.Forms.TextBox papperFilePath;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.Button buttonExecute;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxWaterPapper;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBoxPDFFolder;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
