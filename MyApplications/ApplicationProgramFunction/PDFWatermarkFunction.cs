@@ -72,6 +72,10 @@ namespace ApplicationProgramFunction
                 {
                     left = width - image.Width + left;
                 }
+                if(top<0)
+                {
+                    top = height - image.Height + top;
+                }
                 //第一个参数是X轴坐标，第二个参数是Y轴坐标，使用PDF坐标系，文档的左下角为坐标原点。传入参数为左上角为原点
                 image.SetAbsolutePosition(left, (height - image.Height) - top);
 

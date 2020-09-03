@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -240,7 +241,7 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
 
         private void buttonExecute_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBoxPDFFolder.Text) && File.Exists(textBoxPDFFolder.Text)&& !string.IsNullOrWhiteSpace(textBoxWaterPapper.Text) && File.Exists(textBoxWaterPapper.Text))
+            if (!string.IsNullOrWhiteSpace(textBoxPDFFolder.Text) && Directory.Exists(textBoxPDFFolder.Text)&& !string.IsNullOrWhiteSpace(textBoxWaterPapper.Text) &&File.Exists(textBoxWaterPapper.Text))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(textBoxPDFFolder.Text);
                 filesPdf = directoryInfo.GetFiles();
@@ -251,22 +252,34 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
                 return;
             }
             
+            if(!Regex.IsMatch(textBoxLocationX.Text, @"^-|[1-9][0-9]*$")||!Regex.IsMatch(textBoxLocationY.Text,@" ^-|[1-9][0-9]*$"))
+            {
+                MessageBox.Show("坐标包含非法字符","提示");
+                return;
+            }
             foreach(FileInfo fileInfo in filesPdf)
             {
-                string outputfilepath = textBoxWaterPDFFolder.Text;
-                if (string.IsNullOrWhiteSpace(outputfilepath))
+                string outputfilepath = textBoxWaterPDFFolder.Text+"\\" +fileInfo.Name;
+                if (string.IsNullOrWhiteSpace(textBoxWaterPDFFolder.Text) ||!Directory.Exists(textBoxWaterPDFFolder.Text))
                 {
                     outputfilepath = fileInfo.FullName.Split('.')[0] + "1.pdf";
                 }
+
                     
-                    pDFWatermarkFunction.PDFWatermark(fileInfo.FullName, outputfilepath, this.textBoxWaterPapper.Text, 100, -20);
+                    pDFWatermarkFunction.PDFWatermark(fileInfo.FullName, outputfilepath, this.textBoxWaterPapper.Text, int.Parse(textBoxLocationY.Text), int.Parse(textBoxLocationX.Text),0);
             }
+            MessageBox.Show("转换完成","提示");
         }
 
         private void buttonSelectCacheFolder_Click(object sender, EventArgs e)
         {
             string waterPdfFilePath = this.SelectPath();
             this.textBoxWaterPDFFolder.Text = waterPdfFilePath;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,6 +45,9 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.buttonSelectCacheFolder = new System.Windows.Forms.Button();
             this.textBoxWaterPDFFolder = new System.Windows.Forms.TextBox();
+            this.textBoxLocationY = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBoxLocationX = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -130,7 +133,7 @@
             // 
             // buttonExecute
             // 
-            this.buttonExecute.Location = new System.Drawing.Point(19, 174);
+            this.buttonExecute.Location = new System.Drawing.Point(19, 225);
             this.buttonExecute.Name = "buttonExecute";
             this.buttonExecute.Size = new System.Drawing.Size(47, 23);
             this.buttonExecute.TabIndex = 12;
@@ -183,6 +186,9 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.textBoxLocationY);
+            this.groupControl1.Controls.Add(this.button7);
+            this.groupControl1.Controls.Add(this.textBoxLocationX);
             this.groupControl1.Controls.Add(this.buttonSelectCacheFolder);
             this.groupControl1.Controls.Add(this.textBoxWaterPDFFolder);
             this.groupControl1.Controls.Add(this.labelControl1);
@@ -223,6 +229,30 @@
             this.textBoxWaterPDFFolder.Size = new System.Drawing.Size(127, 22);
             this.textBoxWaterPDFFolder.TabIndex = 14;
             // 
+            // textBoxLocationY
+            // 
+            this.textBoxLocationY.Location = new System.Drawing.Point(56, 182);
+            this.textBoxLocationY.Name = "textBoxLocationY";
+            this.textBoxLocationY.Size = new System.Drawing.Size(31, 22);
+            this.textBoxLocationY.TabIndex = 18;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(152, 182);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 23);
+            this.button7.TabIndex = 17;
+            this.button7.Text = "水印文件坐标(x,y)";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBoxLocationX
+            // 
+            this.textBoxLocationX.Location = new System.Drawing.Point(19, 182);
+            this.textBoxLocationX.Name = "textBoxLocationX";
+            this.textBoxLocationX.Size = new System.Drawing.Size(31, 22);
+            this.textBoxLocationX.TabIndex = 16;
+            // 
             // ChangeSystemWallPapper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -260,5 +290,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Button buttonSelectCacheFolder;
         private System.Windows.Forms.TextBox textBoxWaterPDFFolder;
+        private System.Windows.Forms.TextBox textBoxLocationY;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBoxLocationX;
     }
 }
