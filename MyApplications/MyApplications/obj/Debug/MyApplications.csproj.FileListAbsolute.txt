@@ -42,3 +42,9 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplication
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.CopyComplete
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.exe
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.pdb
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.CELL50Lib.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\AxInterop.CELL50Lib.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.ResolveComReference.cache
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.EditPictureForCell.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.PictureEdit.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.exe.licenses

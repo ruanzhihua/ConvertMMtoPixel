@@ -205,5 +205,12 @@ namespace MyApplications
                 this.timer.Start();
             }
         }
+
+        private void pictureEditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditPictureForCell editPictureForCell = new EditPictureForCell();
+            editPictureForCell.WindowState = FormWindowState.Normal;
+            editPictureForCell.ShowDialog();
+        }
     }
 }
