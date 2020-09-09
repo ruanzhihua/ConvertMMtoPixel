@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContainerControls\UserBaseControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,12 @@
     </Compile>
     <Compile Include="ContainerControls\UserMessbox.Designer.cs">
       <DependentUpon>UserMessbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ImageCroppingBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ImageCroppingBox.Designer.cs">
+      <DependentUpon>ImageCroppingBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -42,7 +42,15 @@ namespace MyApplications
             PictureEdit pictureEdit = new PictureEdit();
             pictureEdit.image = (Image)new Bitmap(this.OriginPicture.Image).Clone();
             pictureEdit.WindowState = FormWindowState.Maximized;
+            pictureEdit.FormClosing += (object sender1, FormClosingEventArgs e1) =>
+                {
+                    this.ResultPicture.Image = (Image)new Bitmap(pictureEdit.image).Clone();
+                };
+                ;
             pictureEdit.ShowDialog();
+            
         }
+
+       
     }
 }
