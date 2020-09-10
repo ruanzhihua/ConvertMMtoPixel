@@ -48,3 +48,4 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplication
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.EditPictureForCell.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.PictureEdit.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.exe.licenses
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.PicutreZoomParameter.resources

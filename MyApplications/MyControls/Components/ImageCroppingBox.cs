@@ -56,7 +56,7 @@ namespace MyControls.Components
             }
         }
 
-        private bool _IsLockSelected;
+        public bool _IsLockSelected;
         ///
         /// 是否锁定当前选择 锁定后无法重新拖选区域
         ///

@@ -41,6 +41,7 @@ namespace MyApplications
             }
             PictureEdit pictureEdit = new PictureEdit();
             pictureEdit.image = (Image)new Bitmap(this.OriginPicture.Image).Clone();
+            pictureEdit.currentOriginMap= (Bitmap)new Bitmap(this.OriginPicture.Image).Clone();
             pictureEdit.WindowState = FormWindowState.Maximized;
             pictureEdit.FormClosing += (object sender1, FormClosingEventArgs e1) =>
                 {
@@ -49,6 +50,7 @@ namespace MyApplications
                 ;
             pictureEdit.ShowDialog();
             
+                
         }
 
        

@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPictureForCell));
             this.axCell1 = new AxCELL50Lib.AxCell();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.OriginPicture = new System.Windows.Forms.PictureBox();
             this.ResultPicturePanel = new System.Windows.Forms.Panel();
+            this.ResultPicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEditPicture = new DevExpress.XtraEditors.SimpleButton();
-            this.OriginPicture = new System.Windows.Forms.PictureBox();
-            this.ResultPicture = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axCell1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.ResultPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OriginPicture)).BeginInit();
+            this.ResultPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ResultPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,15 @@
             this.panel4.Size = new System.Drawing.Size(280, 280);
             this.panel4.TabIndex = 1;
             // 
+            // OriginPicture
+            // 
+            this.OriginPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OriginPicture.Location = new System.Drawing.Point(0, 0);
+            this.OriginPicture.Name = "OriginPicture";
+            this.OriginPicture.Size = new System.Drawing.Size(280, 280);
+            this.OriginPicture.TabIndex = 0;
+            this.OriginPicture.TabStop = false;
+            // 
             // ResultPicturePanel
             // 
             this.ResultPicturePanel.Controls.Add(this.ResultPicture);
@@ -81,6 +90,15 @@
             this.ResultPicturePanel.Name = "ResultPicturePanel";
             this.ResultPicturePanel.Size = new System.Drawing.Size(280, 280);
             this.ResultPicturePanel.TabIndex = 2;
+            // 
+            // ResultPicture
+            // 
+            this.ResultPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ResultPicture.Location = new System.Drawing.Point(0, 0);
+            this.ResultPicture.Name = "ResultPicture";
+            this.ResultPicture.Size = new System.Drawing.Size(280, 280);
+            this.ResultPicture.TabIndex = 0;
+            this.ResultPicture.TabStop = false;
             // 
             // label1
             // 
@@ -109,24 +127,6 @@
             this.btnEditPicture.Text = "编辑";
             this.btnEditPicture.Click += new System.EventHandler(this.btnEditPicture_Click);
             // 
-            // OriginPicture
-            // 
-            this.OriginPicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OriginPicture.Location = new System.Drawing.Point(0, 0);
-            this.OriginPicture.Name = "OriginPicture";
-            this.OriginPicture.Size = new System.Drawing.Size(280, 280);
-            this.OriginPicture.TabIndex = 0;
-            this.OriginPicture.TabStop = false;
-            // 
-            // ResultPicture
-            // 
-            this.ResultPicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ResultPicture.Location = new System.Drawing.Point(0, 0);
-            this.ResultPicture.Name = "ResultPicture";
-            this.ResultPicture.Size = new System.Drawing.Size(280, 280);
-            this.ResultPicture.TabIndex = 0;
-            this.ResultPicture.TabStop = false;
-            // 
             // EditPictureForCell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -137,8 +137,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axCell1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.ResultPicturePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OriginPicture)).EndInit();
+            this.ResultPicturePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ResultPicture)).EndInit();
             this.ResumeLayout(false);
 
