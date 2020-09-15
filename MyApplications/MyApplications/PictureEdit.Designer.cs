@@ -52,8 +52,10 @@
             this.textBoxPictureText = new System.Windows.Forms.TextBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.buttonConfirmPictureTextContenr = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panelBottom.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -199,7 +201,7 @@
             // 
             // btnSelectArea
             // 
-            this.btnSelectArea.Location = new System.Drawing.Point(389, 166);
+            this.btnSelectArea.Location = new System.Drawing.Point(492, 154);
             this.btnSelectArea.Name = "btnSelectArea";
             this.btnSelectArea.Size = new System.Drawing.Size(83, 23);
             this.btnSelectArea.TabIndex = 5;
@@ -214,7 +216,7 @@
             this.imageCroppingBox1.IsDrawMagnifier = false;
             this.imageCroppingBox1.IsLockSelected = false;
             this.imageCroppingBox1.IsSetClip = true;
-            this.imageCroppingBox1.Location = new System.Drawing.Point(167, 98);
+            this.imageCroppingBox1.Location = new System.Drawing.Point(270, 86);
             this.imageCroppingBox1.MaskColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.imageCroppingBox1.Name = "imageCroppingBox1";
             this.imageCroppingBox1.SelectedRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -222,6 +224,7 @@
             this.imageCroppingBox1.TabIndex = 10;
             this.imageCroppingBox1.Text = "imageCroppingBox1";
             this.imageCroppingBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.imageCroppingBox1_MouseClick);
+            this.imageCroppingBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.imageCroppingBox1_MouseUp_1);
             // 
             // panelBottom
             // 
@@ -256,7 +259,7 @@
             // 
             // textBoxPictureText
             // 
-            this.textBoxPictureText.Location = new System.Drawing.Point(389, 196);
+            this.textBoxPictureText.Location = new System.Drawing.Point(492, 184);
             this.textBoxPictureText.Name = "textBoxPictureText";
             this.textBoxPictureText.Size = new System.Drawing.Size(83, 22);
             this.textBoxPictureText.TabIndex = 16;
@@ -265,7 +268,7 @@
             // buttonConfirmPictureTextContenr
             // 
             this.buttonConfirmPictureTextContenr.ForeColor = System.Drawing.Color.Black;
-            this.buttonConfirmPictureTextContenr.Location = new System.Drawing.Point(478, 196);
+            this.buttonConfirmPictureTextContenr.Location = new System.Drawing.Point(581, 184);
             this.buttonConfirmPictureTextContenr.Name = "buttonConfirmPictureTextContenr";
             this.buttonConfirmPictureTextContenr.Size = new System.Drawing.Size(22, 23);
             this.buttonConfirmPictureTextContenr.TabIndex = 18;
@@ -274,16 +277,27 @@
             this.buttonConfirmPictureTextContenr.Visible = false;
             this.buttonConfirmPictureTextContenr.Click += new System.EventHandler(this.buttonConfirmPictureTextContenr_Click);
             // 
+            // panelMain
+            // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.AutoSize = true;
+            this.panelMain.Controls.Add(this.buttonConfirmPictureTextContenr);
+            this.panelMain.Controls.Add(this.textBoxPictureText);
+            this.panelMain.Controls.Add(this.btnSelectArea);
+            this.panelMain.Controls.Add(this.imageCroppingBox1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 43);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(893, 400);
+            this.panelMain.TabIndex = 23;
+            // 
             // PictureEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 493);
-            this.Controls.Add(this.buttonConfirmPictureTextContenr);
-            this.Controls.Add(this.textBoxPictureText);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelBottom);
-            this.Controls.Add(this.imageCroppingBox1);
-            this.Controls.Add(this.btnSelectArea);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -293,6 +307,8 @@
             this.Load += new System.EventHandler(this.PictureEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panelBottom.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +339,6 @@
         private System.Windows.Forms.Button buttonPictureTextColor;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button buttonConfirmPictureTextContenr;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

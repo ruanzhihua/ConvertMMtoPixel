@@ -87,6 +87,12 @@
       <DependentUpon>ChangeSystemWallPapper.cs</DependentUpon>
     </Compile>
     <Compile Include="DelegateForCalculateFunctionRunTime.cs" />
+    <Compile Include="DWGViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DWGViewForm.Designer.cs">
+      <DependentUpon>DWGViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,11 +131,20 @@
     <Compile Include="PictureEdit.Designer.cs">
       <DependentUpon>PictureEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitFormCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitFormCommon.Designer.cs">
+      <DependentUpon>WaitFormCommon.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangeSystemWallPapper.resx">
       <DependentUpon>ChangeSystemWallPapper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColorToArgb.resx">
       <DependentUpon>ColorToArgb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DWGViewForm.resx">
+      <DependentUpon>DWGViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -155,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PictureEdit.resx">
       <DependentUpon>PictureEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitFormCommon.resx">
+      <DependentUpon>WaitFormCommon.cs</DependentUpon>
     </EmbeddedResource>
     <Fakes Include="Fakes\DataWindow.fakes" />
     <None Include="packages.config" />
@@ -189,6 +207,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="ACCTRLLib">
+      <Guid>{064FC104-5D0C-489D-A4F5-A2A2EAF42E3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxACCTRLLib">
+      <Guid>{064FC104-5D0C-489D-A4F5-A2A2EAF42E3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
     <COMReference Include="AxCELL50Lib">
       <Guid>{7802D41A-28B0-43C4-95EA-17B7E32337D1}</Guid>
       <VersionMajor>1</VersionMajor>

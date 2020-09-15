@@ -134,17 +134,24 @@ namespace MyApplications
         /// <param name="e"></param>
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            mouseSelectAreaFlag = true;            
+            mouseSelectAreaFlag = true;
+            if (mouseSelectAreaFlag == true) mouseSelectAreaFlag = false;
             switch (this.barButtonItem4.Caption)
             {
                 case "裁剪":
                     this.barButtonItem4.Caption = "选择裁剪区域";
+                    this.btnSelectArea.Visible = true;
                     this.imageCroppingBox1._IsLockSelected = false;
                     break;
-                
+                case "选择裁剪区域":
+                    this.barButtonItem4.Caption = "裁剪";
+                    this.btnSelectArea.Visible = false;
+                    this.imageCroppingBox1._IsLockSelected = true; ;
+                    break;
+
             }
             this.btnSelectArea.Location = new Point(this.imageCroppingBox1.Location.X + this.imageCroppingBox1.Width - btnSelectArea.Width, this.imageCroppingBox1.Location.Y + this.imageCroppingBox1.Height + 3);
-            this.btnSelectArea.Visible = true;
+            
             
             
 
@@ -195,7 +202,8 @@ namespace MyApplications
         private void PictureEdit_Load(object sender, EventArgs e)
         {
             this.imageCroppingBox1._IsLockSelected = true;
-            this.imageCroppingBox1.Location = new Point((this.Size.Width - image.Size.Width) / 2, (this.Size.Height - image.Size.Height) / 2);
+            Point imageLocation = new Point((this.panelMain.Size.Width - image.Size.Width) / 2, (this.panelMain.Size.Height - image.Size.Height) / 2);
+            this.imageCroppingBox1.Location = new Point(imageLocation.X < 0 ? 0: imageLocation.X, imageLocation.Y<0?0: imageLocation.Y);
             //默认五号字
             this.comboBoxFontSize.Items.AddRange(new object[] { 5f, 5.5f,6.5f,7.5f,9f,10.5f,12f,14f,15f,16f,18f,22f,24f,26f,36f,42f });
             this.comboBoxFontSize.SelectedIndex = 5;
@@ -384,6 +392,18 @@ namespace MyApplications
             panelBottom.Visible=false;
             this.textBoxPictureText.Visible = panelBottom.Visible;
             this.buttonConfirmPictureTextContenr.Visible = panelBottom.Visible;
+        }
+
+        private void imageCroppingBox1_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            switch (this.barButtonItem4.Caption)
+            {
+                
+                case "选择裁剪区域":
+                    this.btnSelectArea.Location = new Point(e.X+imageCroppingBox1.Location.X - btnSelectArea.Width,e.Y+imageCroppingBox1.Location.Y  + 3);
+                    break;
+
+            }
         }
     }
 }

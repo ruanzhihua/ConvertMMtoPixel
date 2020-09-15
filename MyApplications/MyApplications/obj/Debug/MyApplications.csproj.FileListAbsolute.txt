@@ -49,3 +49,7 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplication
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.PictureEdit.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.exe.licenses
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.PicutreZoomParameter.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.ACCTRLLib.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\AxInterop.ACCTRLLib.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.DWGViewForm.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.WaitFormCommon.resources
