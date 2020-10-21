@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.Drawing.Drawing2D;
+using System.Runtime.CompilerServices;
 
 namespace MyApplications
 {
@@ -23,18 +24,20 @@ namespace MyApplications
             get
             {
                 return imageCroppingBox1.Image;
-            }set
+            }
+            set
             {
                 this.imageCroppingBox1.Image = value;
                 this.imageCroppingBox1.Size = image.Size;
-               
+                this.barStaticItemPictureSize.Caption = string.Format("长：{0} 宽：{1}", image.Size.Width, image.Size.Height);
+                zoomTrackBarControl1_ValueChanged(null, null);
             }
         }
         private Bitmap currentBitmap
         {
             get
             {
-                return (Bitmap)new Bitmap(this.imageCroppingBox1.Image).Clone();
+                return (Bitmap)new Bitmap(image).Clone();
             }
         }
         public Bitmap currentOriginMap;
@@ -51,8 +54,7 @@ namespace MyApplications
             }
             Bitmap bitmap = currentBitmap;
             bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
-            this.imageCroppingBox1.Image = bitmap;
-            this.imageCroppingBox1.Size = this.imageCroppingBox1.Image.Size;
+            image = bitmap;            
             this.btnSelectArea.Location = new Point(this.imageCroppingBox1.Location.X + this.imageCroppingBox1.Width - btnSelectArea.Width, this.imageCroppingBox1.Location.Y + this.imageCroppingBox1.Height + 3);
             this.currentOriginMap = (Bitmap)new Bitmap(imageCroppingBox1.Image).Clone();
         }
@@ -69,8 +71,7 @@ namespace MyApplications
             }            
             Bitmap bitmap= currentBitmap;
             bitmap.RotateFlip(RotateFlipType.RotateNoneFlipX);
-            this.imageCroppingBox1.Image = bitmap;
-            this.imageCroppingBox1.Size = this.imageCroppingBox1.Size;
+            image = bitmap;           
             this.btnSelectArea.Location = new Point(this.imageCroppingBox1.Location.X+this.imageCroppingBox1.Width - btnSelectArea.Width, this.imageCroppingBox1.Location.Y+this.imageCroppingBox1.Height + 3);
             this.currentOriginMap = (Bitmap)new Bitmap(imageCroppingBox1.Image).Clone();
         }
@@ -113,7 +114,7 @@ namespace MyApplications
             graphics.FillRectangle(brush, rectangle2);
             graphics.FillRectangle(brush, rectangle3);
             graphics.FillRectangle(brush, rectangle4);
-            this.imageCroppingBox1.Image = bitmap;
+            image = bitmap;
             
         }
         private void Crop()
@@ -124,7 +125,7 @@ namespace MyApplications
                 return;
             }
             
-            this.imageCroppingBox1.Image = currentBitmap.Clone(this.imageCroppingBox1.SelectedRectangle, currentBitmap.PixelFormat);
+            image = currentBitmap.Clone(this.imageCroppingBox1.SelectedRectangle, currentBitmap.PixelFormat);
         }
             
         /// <summary>
@@ -152,9 +153,6 @@ namespace MyApplications
             }
             this.btnSelectArea.Location = new Point(this.imageCroppingBox1.Location.X + this.imageCroppingBox1.Width - btnSelectArea.Width, this.imageCroppingBox1.Location.Y + this.imageCroppingBox1.Height + 3);
             
-            
-            
-
         }
         #region
         bool mouseSelectAreaFlag = false;
@@ -168,9 +166,7 @@ namespace MyApplications
 
         private void imageCroppingBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            mouseSelectAreaFlag = false;
-            
-            
+            mouseSelectAreaFlag = false; 
             this.btnSelectArea.Location= new Point(MousePosition.X-btnSelectArea.Width, MousePosition.Y+3);
             this.btnSelectArea.Visible = true;
         }
@@ -195,20 +191,22 @@ namespace MyApplications
             this.barButtonItem4.Caption = "裁剪";
             this.imageCroppingBox1._IsLockSelected = true;
             this.Crop();
-            this.imageCroppingBox1.Size = this.imageCroppingBox1.Image.Size;
             this.currentOriginMap = (Bitmap)new Bitmap(imageCroppingBox1.Image).Clone();
         }
 
         private void PictureEdit_Load(object sender, EventArgs e)
         {
             this.imageCroppingBox1._IsLockSelected = true;
-            Point imageLocation = new Point((this.panelMain.Size.Width - image.Size.Width) / 2, (this.panelMain.Size.Height - image.Size.Height) / 2);
-            this.imageCroppingBox1.Location = new Point(imageLocation.X < 0 ? 0: imageLocation.X, imageLocation.Y<0?0: imageLocation.Y);
+            //Point imageLocation = new Point((this.panelLeft.Size.Width - image.Size.Width) / 2, (this.panelLeft.Size.Height - image.Size.Height) / 2);
+            //this.imageCroppingBox1.Location = new Point(imageLocation.X < 0 ? 0: imageLocation.X, imageLocation.Y<0?0: imageLocation.Y);
             //默认五号字
             this.comboBoxFontSize.Items.AddRange(new object[] { 5f, 5.5f,6.5f,7.5f,9f,10.5f,12f,14f,15f,16f,18f,22f,24f,26f,36f,42f });
             this.comboBoxFontSize.SelectedIndex = 5;
-            this.textBoxPictureText.ForeColor = this.buttonPictureTextColor.ForeColor;
-            
+            this.fontEdit1.Text = "宋体";            
+            this.imageCroppingBox1_MouseClick(null, new MouseEventArgs(MouseButtons.Right, 1, 5, 5, 0));
+            //初始化工具栏
+            changePictureTextStyle();
+            zoomTrackBarControl1_ValueChanged(null, null);
         }
         /// <summary>
         /// 图片缩放实现函数
@@ -279,8 +277,7 @@ namespace MyApplications
                     bmap.SetPixel(x, y, System.Drawing.Color.FromArgb(255, nR, nG, nB));
                 }
             }
-            this.imageCroppingBox1.Image = bmap;
-            this.imageCroppingBox1.Size = this.imageCroppingBox1.Image.Size;
+            image = bmap;           
             this.currentOriginMap = (Bitmap)new Bitmap(imageCroppingBox1.Image).Clone();
 
         }
@@ -308,40 +305,39 @@ namespace MyApplications
         {
             if(this.barButtonItem6.Border == DevExpress.XtraEditors.Controls.BorderStyles.Simple)
             {
-                this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-                this.panelBottom.Visible = false;
+                this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+                this.buttonConfirmPictureTextContenr.Visible= this.textBoxPictureText.Visible = false;
+                
+
             }
             else
             {
                 this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-                this.panelBottom.Visible = true;
+                this.buttonConfirmPictureTextContenr.Visible = this.textBoxPictureText.Visible = true;
+
+
             }
-            this.comboBoxFontSize.Location = new Point(this.panelBottom.Size.Width / 2 - this.comboBoxFontSize.Width, this.comboBoxFontSize.Location.Y);
-            this.buttonPictureTextColor.Location = new Point(this.comboBoxFontSize.Location.X + this.comboBoxFontSize.Width + 5, this.comboBoxFontSize.Location.Y);
+            
+            
 
         }       
 
         private void imageCroppingBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.textBoxPictureText.Visible = panelBottom.Visible;
-            this.buttonConfirmPictureTextContenr.Visible = panelBottom.Visible;
-            Font font = new Font("宋体", float.Parse(this.comboBoxFontSize.SelectedItem.ToString()), FontStyle.Regular);
-            
-            this.textBoxPictureText.Font = font;
+        {           
+           
             this.textBoxPictureText.Location = new Point(e.X + imageCroppingBox1.Location.X, e.Y + imageCroppingBox1.Location.Y);
-            this.buttonConfirmPictureTextContenr.Location = new Point(this.textBoxPictureText.Location.X + this.textBoxPictureText.Width + 5, this.textBoxPictureText.Location.Y);
-            
+            this.buttonConfirmPictureTextContenr.Location = new Point(this.textBoxPictureText.Location.X + this.textBoxPictureText.Width + 5, this.textBoxPictureText.Location.Y);            
+        }
+        private void changePictureTextStyle()
+        {            
+            Font font = new Font(this.fontEdit1.Text, float.Parse(this.comboBoxFontSize.SelectedItem.ToString()), FontStyle.Regular);
+            this.textBoxPictureText.Font =this.buttonPictureTextColor.Font= font;
+            this.buttonPictureTextColor.ForeColor = this.textBoxPictureText.ForeColor = this.colorEdit1.Color;;
         }
 
         private void buttonPictureTextColor_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult= this.colorDialog1.ShowDialog();
-            if(dialogResult==DialogResult.OK)
-            {
-                this.buttonPictureTextColor.ForeColor = this.colorDialog1.Color;
-                this.textBoxPictureText.ForeColor = this.colorDialog1.Color;
-
-            }
+            this.barButtonItem6_ItemClick(null, null);           
         }
         /// <summary>
         /// 为图像添加文字
@@ -371,7 +367,7 @@ namespace MyApplications
             gw = gw == 0 ? 10 : gw;
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush(new Rectangle(0, 0, gw, (int)textFont.Size), color3, color4, LinearGradientMode.Vertical);
             graphics.DrawString(text, textFont, linearGradientBrush, pointLocation);
-            this.imageCroppingBox1.Image = bitmap;
+            image = bitmap;
             currentOriginMap = (Bitmap)bitmap.Clone();
             ///修复添加文字后锁定选择失效
             this.imageCroppingBox1._IsLockSelected = true;
@@ -388,10 +384,9 @@ namespace MyApplications
                 Point point = new Point(this.textBoxPictureText.Location.X - this.imageCroppingBox1.Location.X, this.textBoxPictureText.Location.Y - this.imageCroppingBox1.Location.Y);
                 this.InsertTextToImage(this.textBoxPictureText.Text, point, this.textBoxPictureText.Font,this.textBoxPictureText.ForeColor.Name,"");
             }
-            this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-            panelBottom.Visible=false;
-            this.textBoxPictureText.Visible = panelBottom.Visible;
-            this.buttonConfirmPictureTextContenr.Visible = panelBottom.Visible;
+            this.barButtonItem6_ItemClick(null, null);
+           
+           
         }
 
         private void imageCroppingBox1_MouseUp_1(object sender, MouseEventArgs e)
@@ -404,6 +399,140 @@ namespace MyApplications
                     break;
 
             }
+        }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fontEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colorEdit1_TextChanged(object sender, EventArgs e)
+        {
+            this.changePictureTextStyle();
+        }
+
+        private void fontEdit1_TextChanged(object sender, EventArgs e)
+        {
+            this.changePictureTextStyle();
+        }
+
+        private void comboBoxFontSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.changePictureTextStyle();
+        }
+
+        private void fontEdit2_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            System.Windows.Forms.FileDialog fileDialog = new System.Windows.Forms.OpenFileDialog();
+            fileDialog.Filter = "图像(*.jpg;*.JPG)|*.jpg;*.JPG|图像（*.png）|*.png|图像（*.dwg)|*.dwg";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] fileNameArray = fileDialog.FileName.Split('.');
+                foreach (string str in fileNameArray)
+                {
+                    if (str.ToUpper() == "DWG")
+                    {
+                        try
+                        {
+                            splashScreenManager1.ShowWaitForm();
+                            splashScreenManager1.SetWaitFormCaption("正在加载内容，请稍后...");
+
+                            Application.DoEvents();
+                            DWGViewForm dWGViewForm = new DWGViewForm();
+                            dWGViewForm.WindowState = FormWindowState.Maximized;
+                            dWGViewForm.PutSourcePath(fileDialog.FileName);
+                            splashScreenManager1.CloseWaitForm();
+                            dWGViewForm.ShowDialog();
+                            return;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("未安装DWG TrueView或者其他错误！", "错误");
+                        }
+                    }
+                }
+                this.image = Image.FromFile(fileDialog.FileName);
+                currentOriginMap = (Bitmap)new Bitmap(this.image).Clone();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void zoomTrackBarControl1_ValueChanged(object sender, EventArgs e)
+        {
+            if(zoomTrackBarControl1.Value!=0)
+            {
+                
+            }
+            else
+            {
+                zoomTrackBarControl1.Value = 1;
+                MessageBox.Show("无法缩放到0%", "提示");
+            }
+            this.zoomValue.Text = zoomTrackBarControl1.Value.ToString()+"%";
+            if(image!=null)
+            {
+                textZoomWidth.Text = Math.Ceiling(this.image.Width * zoomTrackBarControl1.Value * 0.01).ToString();
+                textZoomHeight.Text= Math.Ceiling(this.image.Height * zoomTrackBarControl1.Value * 0.01).ToString();
+            }
+            else
+            {
+                textZoomWidth.Text = "0";
+                textZoomHeight.Text = "0";
+            }
+            
+        }
+        /// <summary>
+        /// 执行比例缩放
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConfirmZoom_Click(object sender, EventArgs e)
+        {
+            Size pictureZoomSize = new Size();
+            try
+            {
+                pictureZoomSize.Width = int.Parse(textZoomWidth.Text);
+                pictureZoomSize.Height = int.Parse(textZoomHeight.Text);
+            }
+            catch
+            {
+                MessageBox.Show("缩放尺寸不合法！");
+            }
+            
+            if (zoomValue.Text!="100%"&& pictureZoomSize.Width >= 0 && pictureZoomSize.Height >= 0)
+            {
+                this.ResizePicture(pictureZoomSize.Width, pictureZoomSize.Height);
+            }     
+
+            
+        }
+
+        private void buttonImageRotate_Click(object sender, EventArgs e)
+        {
+            barButtonItem1_ItemClick(null, null);
+        }
+
+        private void buttonImageMirror_Click(object sender, EventArgs e)
+        {
+            barButtonItem2_ItemClick(null, null);
+        }
+
+        private void buttonImageCrop_Click(object sender, EventArgs e)
+        {
+            barButtonItem4_ItemClick(null, null);
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

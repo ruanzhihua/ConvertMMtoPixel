@@ -22,7 +22,6 @@ E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.dll
 E:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.pdb
 F:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyControls.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyControls.pdb
-F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserBaseControl.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.ContainerControls.UserMessbox.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.Properties.Resources.resources
