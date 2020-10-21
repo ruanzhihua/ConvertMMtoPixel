@@ -305,8 +305,8 @@
             // 
             // panelLeft
             // 
-            this.panelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLeft.AutoScroll = true;
             this.panelLeft.Controls.Add(this.buttonConfirmPictureTextContenr);
@@ -607,7 +607,7 @@
         private System.Windows.Forms.Button buttonConfirmPictureTextContenr;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelRight;
-        private  System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelMain;
         private DevExpress.XtraEditors.FontEdit fontEdit1;
         private DevExpress.XtraEditors.ColorEdit colorEdit1;
         private System.Windows.Forms.GroupBox pictureTextGroup;

@@ -452,7 +452,9 @@ namespace MyApplications
                         }
                         catch (Exception ex)
                         {
+                            splashScreenManager1.CloseWaitForm();
                             MessageBox.Show("未安装DWG TrueView或者其他错误！", "错误");
+                            return;
                         }
                     }
                 }
