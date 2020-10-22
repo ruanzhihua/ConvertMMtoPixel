@@ -49,7 +49,6 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\de\DevExpr
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
-F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.csprojAssemblyReference.cache
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.DWGViewForm.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.PictureEdit.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.PicutreZoomParameter.resources
@@ -64,3 +63,4 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEdi
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\Interop.ACCTRLLib.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\AxInterop.ACCTRLLib.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.csproj.ResolveComReference.cache
+F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\Resources\ApplicationIcon.ico
