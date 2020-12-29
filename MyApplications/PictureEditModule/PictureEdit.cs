@@ -48,7 +48,12 @@ namespace PictureEditModule
         /// <param name="e"></param>
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if(this.imageCroppingBox1.Image==null)
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
+            if (this.imageCroppingBox1.Image==null)
             {
                 return;
             }
@@ -65,6 +70,11 @@ namespace PictureEditModule
         /// <param name="e"></param>
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             if (this.imageCroppingBox1.Image == null)
             {
                 return;
@@ -135,6 +145,11 @@ namespace PictureEditModule
         /// <param name="e"></param>
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             mouseSelectAreaFlag = true;
             if (mouseSelectAreaFlag == true) mouseSelectAreaFlag = false;
             switch (this.barButtonItem4.Caption)
@@ -288,7 +303,11 @@ namespace PictureEditModule
         /// <param name="e"></param>
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             PicutreZoomParameter picutreZoomParameter = new PicutreZoomParameter();
             picutreZoomParameter.FormClosing += (s, ea) =>
             {
@@ -303,7 +322,12 @@ namespace PictureEditModule
 
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if(this.barButtonItem6.Border == DevExpress.XtraEditors.Controls.BorderStyles.Simple)
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
+            if (this.barButtonItem6.Border == DevExpress.XtraEditors.Controls.BorderStyles.Simple)
             {
                 this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
                 this.buttonConfirmPictureTextContenr.Visible= this.textBoxPictureText.Visible = false;
@@ -337,6 +361,11 @@ namespace PictureEditModule
 
         private void buttonPictureTextColor_Click(object sender, EventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             this.barButtonItem6_ItemClick(null, null);           
         }
         /// <summary>
@@ -498,6 +527,14 @@ namespace PictureEditModule
         /// <param name="e"></param>
         private void btnConfirmZoom_Click(object sender, EventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
+            splashScreenManager1.ShowWaitForm();
+            splashScreenManager1.SetWaitFormCaption("正在进行缩放，请稍后...");         
+            
             Size pictureZoomSize = new Size();
             try
             {
@@ -512,23 +549,38 @@ namespace PictureEditModule
             if (zoomValue.Text!="100%"&& pictureZoomSize.Width >= 0 && pictureZoomSize.Height >= 0)
             {
                 this.ResizePicture(pictureZoomSize.Width, pictureZoomSize.Height);
-            }     
+            }
+            splashScreenManager1.CloseWaitForm();
 
-            
         }
 
         private void buttonImageRotate_Click(object sender, EventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             barButtonItem1_ItemClick(null, null);
         }
 
         private void buttonImageMirror_Click(object sender, EventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             barButtonItem2_ItemClick(null, null);
         }
 
         private void buttonImageCrop_Click(object sender, EventArgs e)
         {
+            if (this.image == null)
+            {
+                MessageBox.Show("未选择图片!","提示");
+                return;
+            }
             barButtonItem4_ItemClick(null, null);
         }
 
@@ -543,6 +595,12 @@ namespace PictureEditModule
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            //调用图片文件选取
+            this.fontEdit2_ButtonClick(null, null);
+        }
+
+        private void zoomTrackBarControl1_EditValueChanged(object sender, EventArgs e)
         {
 
         }

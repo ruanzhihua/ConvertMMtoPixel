@@ -316,5 +316,12 @@ namespace MyApplications
             }
             #endregion
         }
+
+        private void dWGTOPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConverDWGToPDF dWGToPDF = new FormConverDWGToPDF();
+            dWGToPDF.StartPosition = FormStartPosition.CenterParent;
+            dWGToPDF.ShowDialog();
+        }
     }
 }

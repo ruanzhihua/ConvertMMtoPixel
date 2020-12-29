@@ -462,11 +462,12 @@
             this.zoomTrackBarControl1.Location = new System.Drawing.Point(6, 66);
             this.zoomTrackBarControl1.MenuManager = this.barManager1;
             this.zoomTrackBarControl1.Name = "zoomTrackBarControl1";
-            this.zoomTrackBarControl1.Properties.Maximum = 100;
+            this.zoomTrackBarControl1.Properties.Maximum = 200;
             this.zoomTrackBarControl1.Size = new System.Drawing.Size(186, 16);
             this.zoomTrackBarControl1.TabIndex = 22;
             this.zoomTrackBarControl1.Value = 100;
             this.zoomTrackBarControl1.ValueChanged += new System.EventHandler(this.zoomTrackBarControl1_ValueChanged);
+            this.zoomTrackBarControl1.EditValueChanged += new System.EventHandler(this.zoomTrackBarControl1_EditValueChanged);
             // 
             // button2
             // 

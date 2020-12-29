@@ -64,3 +64,4 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\Interop.AC
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\AxInterop.ACCTRLLib.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.csproj.ResolveComReference.cache
 F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\bin\Debug\Resources\ApplicationIcon.ico
+F:\MyCode\ConvertMMtoPixel\MyApplications\PictureEditModule\obj\Debug\PictureEditModule.csprojAssemblyReference.cache

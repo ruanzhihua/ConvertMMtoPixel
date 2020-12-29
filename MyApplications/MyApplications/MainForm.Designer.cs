@@ -55,6 +55,7 @@
             this.twoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.threeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviceTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.菜单二ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +72,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.variationalBar = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.serviceTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dWGTOPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -181,13 +182,13 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 设置参数ToolStripMenuItem
             // 
             this.设置参数ToolStripMenuItem.Name = "设置参数ToolStripMenuItem";
-            this.设置参数ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.设置参数ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.设置参数ToolStripMenuItem.Text = "设置参数";
             this.设置参数ToolStripMenuItem.Click += new System.EventHandler(this.设置参数ToolStripMenuItem_Click);
             // 
@@ -243,7 +244,8 @@
             this.twoToolStripMenuItem,
             this.threeToolStripMenuItem,
             this.pictureEditToolStripMenuItem,
-            this.serviceTestToolStripMenuItem});
+            this.serviceTestToolStripMenuItem,
+            this.dWGTOPDFToolStripMenuItem});
             this.菜单一ToolStripMenuItem.Name = "菜单一ToolStripMenuItem";
             this.菜单一ToolStripMenuItem.Size = new System.Drawing.Size(119, 21);
             this.菜单一ToolStripMenuItem.Text = "外部程序";
@@ -275,6 +277,13 @@
             this.pictureEditToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.pictureEditToolStripMenuItem.Text = "PictureEdit";
             this.pictureEditToolStripMenuItem.Click += new System.EventHandler(this.pictureEditToolStripMenuItem_Click);
+            // 
+            // serviceTestToolStripMenuItem
+            // 
+            this.serviceTestToolStripMenuItem.Name = "serviceTestToolStripMenuItem";
+            this.serviceTestToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.serviceTestToolStripMenuItem.Text = "ServiceTest";
+            this.serviceTestToolStripMenuItem.Click += new System.EventHandler(this.serviceTestToolStripMenuItem_Click);
             // 
             // 菜单二ToolStripMenuItem
             // 
@@ -428,12 +437,12 @@
             this.panel3.Size = new System.Drawing.Size(834, 20);
             this.panel3.TabIndex = 14;
             // 
-            // serviceTestToolStripMenuItem
+            // dWGTOPDFToolStripMenuItem
             // 
-            this.serviceTestToolStripMenuItem.Name = "serviceTestToolStripMenuItem";
-            this.serviceTestToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.serviceTestToolStripMenuItem.Text = "ServiceTest";
-            this.serviceTestToolStripMenuItem.Click += new System.EventHandler(this.serviceTestToolStripMenuItem_Click);
+            this.dWGTOPDFToolStripMenuItem.Name = "dWGTOPDFToolStripMenuItem";
+            this.dWGTOPDFToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.dWGTOPDFToolStripMenuItem.Text = "DWGTOPDF";
+            this.dWGTOPDFToolStripMenuItem.Click += new System.EventHandler(this.dWGTOPDFToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -514,6 +523,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripMenuItem pictureEditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dWGTOPDFToolStripMenuItem;
     }
 }
 

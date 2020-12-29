@@ -53,3 +53,6 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\AxInterop.ACC
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.DWGViewForm.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.WaitFormCommon.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.MainForm.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.FormConverDWGToPDF.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.AutoCAD.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.AXDBLib.dll

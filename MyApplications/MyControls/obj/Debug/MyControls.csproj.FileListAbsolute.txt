@@ -29,3 +29,4 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csproj
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.pdb
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache
