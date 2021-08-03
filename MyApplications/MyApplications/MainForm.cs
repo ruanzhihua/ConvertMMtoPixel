@@ -323,5 +323,12 @@ namespace MyApplications
             dWGToPDF.StartPosition = FormStartPosition.CenterParent;
             dWGToPDF.ShowDialog();
         }
+
+        private void fileWatcherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileWatcherForm fileWatcherForm = new FileWatcherForm();
+            fileWatcherForm.StartPosition = FormStartPosition.CenterParent;
+            fileWatcherForm.ShowDialog();
+        }
     }
 }

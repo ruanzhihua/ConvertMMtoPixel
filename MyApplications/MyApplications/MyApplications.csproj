@@ -139,6 +139,12 @@
     <Compile Include="DWGViewForm.Designer.cs">
       <DependentUpon>DWGViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileWatcherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileWatcherForm.Designer.cs">
+      <DependentUpon>FileWatcherForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConverDWGToPDF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DWGViewForm.resx">
       <DependentUpon>DWGViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileWatcherForm.resx">
+      <DependentUpon>FileWatcherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConverDWGToPDF.resx">
       <DependentUpon>FormConverDWGToPDF.cs</DependentUpon>

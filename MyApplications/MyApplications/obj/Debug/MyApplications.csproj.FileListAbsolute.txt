@@ -31,7 +31,6 @@ E:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplication
 F:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.exe.config
 F:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.exe
 F:\MyCode\ConvertMMtoPixel\MyApplications\Debug\MyApplications.pdb
-F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csprojAssemblyReference.cache
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.ChangeSystemWallPapper.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.ColorToArgb.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.Properties.Resources.resources
@@ -56,3 +55,5 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplication
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.FormConverDWGToPDF.resources
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.AutoCAD.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\Interop.AXDBLib.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.csproj.AssemblyReference.cache
+F:\MyCode\ConvertMMtoPixel\MyApplications\MyApplications\obj\Debug\MyApplications.FileWatcherForm.resources
