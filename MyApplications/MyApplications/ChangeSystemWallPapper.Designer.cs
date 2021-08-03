@@ -42,12 +42,21 @@
             this.button6 = new System.Windows.Forms.Button();
             this.textBoxPDFFolder = new System.Windows.Forms.TextBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonSelectCacheFolder = new System.Windows.Forms.Button();
-            this.textBoxWaterPDFFolder = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBoxPDFPath = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textLocationY = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textLocationX = new System.Windows.Forms.TextBox();
+            this.textBoxText = new System.Windows.Forms.TextBox();
             this.textBoxLocationY = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.textBoxLocationX = new System.Windows.Forms.TextBox();
+            this.buttonSelectCacheFolder = new System.Windows.Forms.Button();
+            this.textBoxWaterPDFFolder = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -133,7 +142,7 @@
             // 
             // buttonExecute
             // 
-            this.buttonExecute.Location = new System.Drawing.Point(19, 225);
+            this.buttonExecute.Location = new System.Drawing.Point(19, 286);
             this.buttonExecute.Name = "buttonExecute";
             this.buttonExecute.Size = new System.Drawing.Size(47, 23);
             this.buttonExecute.TabIndex = 12;
@@ -160,12 +169,13 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(257, 69);
+            this.button5.Location = new System.Drawing.Point(484, 218);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 23);
+            this.button5.Size = new System.Drawing.Size(99, 23);
             this.button5.TabIndex = 9;
-            this.button5.Text = "DO";
+            this.button5.Text = "获取文字位置";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -186,6 +196,15 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.button11);
+            this.groupControl1.Controls.Add(this.button10);
+            this.groupControl1.Controls.Add(this.button9);
+            this.groupControl1.Controls.Add(this.textBoxPDFPath);
+            this.groupControl1.Controls.Add(this.button8);
+            this.groupControl1.Controls.Add(this.textLocationY);
+            this.groupControl1.Controls.Add(this.button3);
+            this.groupControl1.Controls.Add(this.textLocationX);
+            this.groupControl1.Controls.Add(this.textBoxText);
             this.groupControl1.Controls.Add(this.textBoxLocationY);
             this.groupControl1.Controls.Add(this.button7);
             this.groupControl1.Controls.Add(this.textBoxLocationX);
@@ -204,30 +223,72 @@
             this.groupControl1.TabIndex = 13;
             this.groupControl1.Text = "批量添加水印";
             // 
-            // labelControl1
+            // button10
             // 
-            this.labelControl1.Location = new System.Drawing.Point(19, 41);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(21, 14);
-            this.labelControl1.TabIndex = 13;
-            this.labelControl1.Text = "PDF";
+            this.button10.Location = new System.Drawing.Point(414, 286);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(47, 23);
+            this.button10.TabIndex = 26;
+            this.button10.Text = "缩放";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // buttonSelectCacheFolder
+            // button9
             // 
-            this.buttonSelectCacheFolder.Location = new System.Drawing.Point(152, 144);
-            this.buttonSelectCacheFolder.Name = "buttonSelectCacheFolder";
-            this.buttonSelectCacheFolder.Size = new System.Drawing.Size(99, 23);
-            this.buttonSelectCacheFolder.TabIndex = 15;
-            this.buttonSelectCacheFolder.Text = "选择存储位置";
-            this.buttonSelectCacheFolder.UseVisualStyleBackColor = true;
-            this.buttonSelectCacheFolder.Click += new System.EventHandler(this.buttonSelectCacheFolder_Click);
+            this.button9.Location = new System.Drawing.Point(351, 286);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(47, 23);
+            this.button9.TabIndex = 25;
+            this.button9.Text = "签章";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // textBoxWaterPDFFolder
+            // textBoxPDFPath
             // 
-            this.textBoxWaterPDFFolder.Location = new System.Drawing.Point(19, 146);
-            this.textBoxWaterPDFFolder.Name = "textBoxWaterPDFFolder";
-            this.textBoxWaterPDFFolder.Size = new System.Drawing.Size(127, 22);
-            this.textBoxWaterPDFFolder.TabIndex = 14;
+            this.textBoxPDFPath.Location = new System.Drawing.Point(351, 73);
+            this.textBoxPDFPath.Name = "textBoxPDFPath";
+            this.textBoxPDFPath.Size = new System.Drawing.Size(127, 22);
+            this.textBoxPDFPath.TabIndex = 23;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(484, 71);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(99, 23);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "选择PDF文件";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textLocationY
+            // 
+            this.textLocationY.Location = new System.Drawing.Point(437, 181);
+            this.textLocationY.Name = "textLocationY";
+            this.textLocationY.Size = new System.Drawing.Size(77, 22);
+            this.textLocationY.TabIndex = 22;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(520, 182);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(63, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "文字坐标";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textLocationX
+            // 
+            this.textLocationX.Location = new System.Drawing.Point(351, 181);
+            this.textLocationX.Name = "textLocationX";
+            this.textLocationX.Size = new System.Drawing.Size(77, 22);
+            this.textLocationX.TabIndex = 20;
+            // 
+            // textBoxText
+            // 
+            this.textBoxText.Location = new System.Drawing.Point(351, 218);
+            this.textBoxText.Name = "textBoxText";
+            this.textBoxText.Size = new System.Drawing.Size(127, 22);
+            this.textBoxText.TabIndex = 19;
             // 
             // textBoxLocationY
             // 
@@ -252,6 +313,41 @@
             this.textBoxLocationX.Name = "textBoxLocationX";
             this.textBoxLocationX.Size = new System.Drawing.Size(31, 22);
             this.textBoxLocationX.TabIndex = 16;
+            // 
+            // buttonSelectCacheFolder
+            // 
+            this.buttonSelectCacheFolder.Location = new System.Drawing.Point(152, 144);
+            this.buttonSelectCacheFolder.Name = "buttonSelectCacheFolder";
+            this.buttonSelectCacheFolder.Size = new System.Drawing.Size(99, 23);
+            this.buttonSelectCacheFolder.TabIndex = 15;
+            this.buttonSelectCacheFolder.Text = "选择存储位置";
+            this.buttonSelectCacheFolder.UseVisualStyleBackColor = true;
+            this.buttonSelectCacheFolder.Click += new System.EventHandler(this.buttonSelectCacheFolder_Click);
+            // 
+            // textBoxWaterPDFFolder
+            // 
+            this.textBoxWaterPDFFolder.Location = new System.Drawing.Point(19, 146);
+            this.textBoxWaterPDFFolder.Name = "textBoxWaterPDFFolder";
+            this.textBoxWaterPDFFolder.Size = new System.Drawing.Size(127, 22);
+            this.textBoxWaterPDFFolder.TabIndex = 14;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(19, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(21, 14);
+            this.labelControl1.TabIndex = 13;
+            this.labelControl1.Text = "PDF";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(257, 107);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(56, 23);
+            this.button11.TabIndex = 27;
+            this.button11.Text = "测试流";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // ChangeSystemWallPapper
             // 
@@ -293,5 +389,14 @@
         private System.Windows.Forms.TextBox textBoxLocationY;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBoxLocationX;
+        private System.Windows.Forms.TextBox textBoxText;
+        private System.Windows.Forms.TextBox textLocationY;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textLocationX;
+        private System.Windows.Forms.TextBox textBoxPDFPath;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

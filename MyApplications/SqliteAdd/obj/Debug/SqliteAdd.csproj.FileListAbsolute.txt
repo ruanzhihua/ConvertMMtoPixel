@@ -1,0 +1,10 @@
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\bin\Debug\SqliteAdd.pdb
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\bin\Debug\System.Data.SQLite.dll
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\bin\Debug\System.Data.SQLite.xml
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.csproj.CoreCompileInputs.cache
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.csproj.CopyComplete
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.pdb
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\bin\Debug\SqliteAdd.exe
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.exe
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.MainForm.resources
+F:\MyCode\ConvertMMtoPixel\MyApplications\SqliteAdd\obj\Debug\SqliteAdd.csproj.GenerateResource.cache

@@ -24,3 +24,4 @@ F:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\A
 F:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.dll
 F:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.pdb
 F:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csproj.CopyComplete
+F:\MyCode\ConvertMMtoPixel\MyApplications\ApplicationProgramFunction\obj\Debug\ApplicationProgramFunction.csprojAssemblyReference.cache

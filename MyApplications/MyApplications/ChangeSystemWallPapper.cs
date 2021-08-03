@@ -216,7 +216,7 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string papperFilePath = this.SelectPathForFile("图像(*.jpg;*.JPG)|*.jpg;*.JPG");
+            string papperFilePath = this.SelectPathForFile("图像(*.jpg;*.JPG;*.png)|*.jpg;*.JPG;*.png");
             this.textBoxWaterPapper.Text = papperFilePath;
         }
         /// <summary>
@@ -266,7 +266,7 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
                 }
 
                     
-                    pDFWatermarkFunction.PDFWatermark(fileInfo.FullName, outputfilepath, this.textBoxWaterPapper.Text, int.Parse(textBoxLocationY.Text), int.Parse(textBoxLocationX.Text),0);
+                    pDFWatermarkFunction.PDFWatermark(fileInfo.FullName, outputfilepath, this.textBoxWaterPapper.Text,24, int.Parse(textBoxLocationY.Text), int.Parse(textBoxLocationX.Text),0);
             }
             MessageBox.Show("转换完成","提示");
         }
@@ -279,6 +279,65 @@ e.ClipRectangle.Y + e.ClipRectangle.Height - 1);
 
         private void button7_Click(object sender, EventArgs e)
         {
+
+        }
+        /// <summary>
+        /// 获取文字位置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pDFWatermarkFunction.GetTextLocationAndSize(this.textBoxPDFPath.Text, new List<string>(textBoxText.Text.Split(' ')));
+            try
+            {
+                if (pDFWatermarkFunction.textInfos.Count == 0) return;
+                StringBuilder pointStr=new StringBuilder(20);
+                foreach(ApplicationProgramFunction.textInfo textInfo in pDFWatermarkFunction.textInfos)
+                {
+                    pointStr.AppendLine(textInfo.textLocation.X.ToString()+" "+ textInfo.textLocation.Y.ToString());
+                }
+                
+
+                textLocationX.Text = (pDFWatermarkFunction.textInfos[0].textLocation.X+2 * pDFWatermarkFunction.textInfos[0].textSize.Height).ToString();
+                textLocationY.Text = (pDFWatermarkFunction.textInfos[0].textLocation.Y + pDFWatermarkFunction.textInfos[0].textSize.Height).ToString();
+                MessageBox.Show(pointStr.ToString());
+            }
+            catch (Exception ex)
+            { }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string papperFilePath = this.SelectPathForFile("文件(*.pdf;*.PDF)|*.pdf;*.PDF");
+            this.textBoxPDFPath.Text = papperFilePath;
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            pDFWatermarkFunction.PDFWatermark(textBoxPDFPath.Text, textBoxPDFPath.Text, this.textBoxWaterPapper.Text,24, float.Parse(textLocationY.Text), float.Parse(textLocationX.Text), 0);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            bool result=pDFWatermarkFunction.PDFZoom(textBoxPDFPath.Text, textBoxPDFPath.Text,iTextSharp.text.PageSize.A5);
+            if(result)
+            {
+#pragma warning disable CA1303 // 请不要将文本作为本地化参数传递
+                _ = MessageBox.Show("success!");
+#pragma warning restore CA1303 // 请不要将文本作为本地化参数传递
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            FileStream fs = new FileStream(this.textBoxWaterPapper.Text, FileMode.Open, FileAccess.Read);
+            Stream ms = new MemoryStream();
+            fs.Position = 0;
+            fs.CopyTo(ms);
+            Bitmap bitmap = new Bitmap(ms);
+            bitmap.Save(@"D:\BuildFolder\2.png");
 
         }
     }
